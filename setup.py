@@ -9,6 +9,6 @@ setup(
     author_email="max@ubicenter.org",
     license="MIT",
     packages=["ubicenter"],
-    install_requires=["plotly",],
+    install_requires=["plotly"],
     zip_safe=False,
 )

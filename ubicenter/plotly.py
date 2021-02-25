@@ -3,6 +3,11 @@ from plotly import graph_objects as go
 
 CONFIG = {"displayModeBar": False}
 
+LOGO_URL = (
+    "https://raw.githubusercontent.com/UBICenter/blog/master/jb/"
+    "_static/ubi_center_logo_wide_blue.png"
+)
+
 
 def add_ubi_center_logo(
     fig: go.Figure, x: float = 0.98, y: float = -0.12
@@ -18,9 +23,7 @@ def add_ubi_center_logo(
     """
     fig.add_layout_image(
         dict(
-            source="https://raw.githubusercontent.com/UBICenter/blog/master/jb/_static/ubi_center_logo_wide_blue.png",
-            # See https://github.com/plotly/plotly.py/issues/2975.
-            # source="../_static/ubi_center_logo_wide_blue.png",
+            source=LOGO_URL,
             xref="paper",
             yref="paper",
             x=x,
