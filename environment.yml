@@ -2,4 +2,7 @@ name: ubicenter
 channels:
   - conda-forge
 dependencies:
+  - flake8
+  - pandas
   - plotly
+  - pytest
