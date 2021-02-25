@@ -36,13 +36,13 @@ def add_ubi_center_logo(
     )
 
 
-def format_fig(fig: go.Figure, show: bool = False, **kwargs) -> go.Figure:
+def format_fig(fig: go.Figure, show: bool = True, **kwargs) -> go.Figure:
     """ Formats figure with UBI styling and logo.
     **kwargs passed to add_ubi_center_logo.
 
     :param fig: Plotly figure.
     :type fig: go.Figure
-    :param show: Whether to show the figure.
+    :param show: Whether to show the figure, defaults to True.
     :type show: bool
     :return: Formatted plotly figure. Also shows it.
     :rtype: go.Figure
