@@ -1,0 +1,5 @@
+name: ubicenter
+channels:
+  - conda-forge
+dependencies:
+  - plotly
