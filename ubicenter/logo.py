@@ -3,6 +3,7 @@ from plotly import graph_objects as go
 
 CONFIG = {"displayModeBar": False}
 
+
 def add_ubi_center_logo(
     fig: go.Figure, x: float = 0.98, y: float = -0.12
 ) -> None:
@@ -32,7 +33,7 @@ def add_ubi_center_logo(
     )
 
 
-def format_fig(fig: go.Figure, show: bool=False, **kwargs) -> go.Figure:
+def format_fig(fig: go.Figure, show: bool = False, **kwargs) -> go.Figure:
     """ Formats figure with UBI styling and logo.
     **kwargs passed to add_ubi_center_logo.
 
