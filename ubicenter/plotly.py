@@ -1,4 +1,5 @@
 from plotly import graph_objects as go
+from typing import Union
 
 
 CONFIG = {"displayModeBar": False}
@@ -36,15 +37,19 @@ def add_ubi_center_logo(
     )
 
 
-def format_fig(fig: go.Figure, show: bool = True, **kwargs) -> go.Figure:
+def format_fig(
+    fig: go.Figure, show: bool = True, **kwargs
+) -> Union[None, go.Figure]:
     """ Formats figure with UBI styling and logo.
     **kwargs passed to add_ubi_center_logo.
 
     :param fig: Plotly figure.
     :type fig: go.Figure
     :param show: Whether to show the figure, defaults to True.
+        If False, returns the figure.
     :type show: bool
-    :return: Formatted plotly figure. Also shows it.
+    :return: If show is True, nothing. If show is False, returns the
+        formatted plotly figure.
     :rtype: go.Figure
     """
     add_ubi_center_logo(fig, **kwargs)
@@ -65,4 +70,5 @@ def format_fig(fig: go.Figure, show: bool = True, **kwargs) -> go.Figure:
     )
     if show:
         fig.show(config=CONFIG)
-    return fig
+    else:
+        return fig
