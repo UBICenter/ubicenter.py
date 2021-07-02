@@ -9,11 +9,19 @@ LOGO_URL = (
     "_static/ubi_center_logo_wide_blue.png"
 )
 
+LIGHTER_BLUE = "#ABCEEB"  # Blue 100.
+LIGHT_BLUE = "#49A6E2"  # Blue 500.
+BLUE = "#1976D2"  # Blue 700.
+DARK_BLUE = "#0F4AA1"  # Blue 900.
+GRAY = "#BDBDBD"
+
+BLUE_COLOR_SEQUENCE = [LIGHTER_BLUE, LIGHT_BLUE, BLUE, DARK_BLUE]
+
 
 def add_ubi_center_logo(
     fig: go.Figure, x: float = 0.98, y: float = -0.12
 ) -> None:
-    """ Adds UBI Center logo to a plotly figure. Returns nothing.
+    """Adds UBI Center logo to a plotly figure. Returns nothing.
 
     :param fig: Plotly figure.
     :type fig: go.Figure
@@ -40,7 +48,7 @@ def add_ubi_center_logo(
 def format_fig(
     fig: go.Figure, show: bool = True, **kwargs
 ) -> Union[None, go.Figure]:
-    """ Formats figure with UBI styling and logo.
+    """Formats figure with UBI styling and logo.
     **kwargs passed to add_ubi_center_logo.
 
     :param fig: Plotly figure.
