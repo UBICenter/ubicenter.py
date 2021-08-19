@@ -46,7 +46,7 @@ def add_ubi_center_logo(
 
 
 def format_fig(
-    fig: go.Figure, show: bool = True, **kwargs
+    fig: go.Figure, show: bool = True, dash: bool = False, **kwargs
 ) -> Union[None, go.Figure]:
     """Formats figure with UBI styling and logo.
     **kwargs passed to add_ubi_center_logo.
@@ -72,10 +72,15 @@ def format_fig(
         font_family="Roboto",
         title_font_size=20,
         plot_bgcolor="white",
-        paper_bgcolor="white",
-        width=800,
-        height=600,
+        paper_bgcolor="white"  
     )
+    
+    if not dash:
+        fig.update_layout(
+            width=800,
+            height=600
+        ) 
+    
     if show:
         fig.show(config=CONFIG)
     else:
