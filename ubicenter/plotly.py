@@ -47,7 +47,11 @@ def add_ubi_center_logo(
 
 
 def format_fig(
-    fig: go.Figure, show: bool = True, dash: bool = False, **kwargs
+    fig: go.Figure,
+    show: bool = True,
+    width: int = 800,
+    height: int = 600,
+    **kwargs
 ) -> Union[None, go.Figure]:
     """Formats figure with UBI styling and logo.
     **kwargs passed to add_ubi_center_logo.
@@ -57,6 +61,10 @@ def format_fig(
     :param show: Whether to show the figure, defaults to True.
         If False, returns the figure.
     :type show: bool
+    :param width: Width of the figure, defaults to 800.
+    :type width: int, optional
+    :param height: Height of the figure, defaults to 600.
+    :type height: int, optional
     :return: If show is True, nothing. If show is False, returns the
         formatted plotly figure.
     :rtype: go.Figure
@@ -73,15 +81,11 @@ def format_fig(
         font_family="Roboto",
         title_font_size=20,
         plot_bgcolor="white",
-        paper_bgcolor="white"  
+        paper_bgcolor="white",
+        width=width,
+        height=height,
     )
-    
-    if not dash:
-        fig.update_layout(
-            width=800,
-            height=600
-        ) 
-    
+
     if show:
         fig.show(config=CONFIG)
     else:
