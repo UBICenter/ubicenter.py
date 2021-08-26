@@ -5,8 +5,8 @@ from typing import Union
 CONFIG = {"displayModeBar": False}
 
 LOGO_URL = (
-    "https://raw.githubusercontent.com/UBICenter/blog/master/jb/"
-    "_static/ubi_center_logo_wide_blue.png"
+    "https://raw.githubusercontent.com/UBICenter/ubicenter.org/master/"
+    "assets/images/logos/wide-blue.jpg"
 )
 
 LIGHTER_BLUE = "#ABCEEB"  # Blue 100.
